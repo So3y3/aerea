@@ -1,4 +1,4 @@
-# AEREA - aerea.gal
+# AEREA - aereagalicia.com
 User-agent: *
 Allow: /
 
@@ -26,4 +26,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://aerea.gal/sitemap.xml
+Sitemap: https://aereagalicia.com/sitemap.xml
