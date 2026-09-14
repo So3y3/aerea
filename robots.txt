@@ -1,4 +1,4 @@
-# ALTURA - altura.gal
+# AEREA - aerea.gal
 User-agent: *
 Allow: /
 
@@ -26,4 +26,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://altura.gal/sitemap.xml
+Sitemap: https://aerea.gal/sitemap.xml
