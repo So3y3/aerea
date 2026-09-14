@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTURA | Fotografía y vídeo aéreo para inmobiliarias en Galicia</title>
+  <meta name="description" content="Fotos y vídeos aéreos de alta calidad para inmobiliarias en toda Galicia. 100 € por propiedad. Redes sociales y retainer mensual para agencias.">
+  <link rel="canonical" href="https://altura.gal/">
+  <link rel="alternate" hreflang="es" href="https://altura.gal/">
+  <link rel="alternate" hreflang="en" href="https://altura.gal/en.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ALTURA">
+  <meta property="og:title" content="ALTURA | Fotografía y vídeo aéreo en Galicia">
+  <meta property="og:description" content="Fotos y vídeos aéreos de alta calidad para inmobiliarias en Galicia. 100 € por propiedad.">
+  <meta property="og:url" content="https://altura.gal/">
+  <meta property="og:image" content="https://altura.gal/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ALTURA | Fotografía y vídeo aéreo en Galicia">
+  <meta name="twitter:description" content="Fotos y vídeos aéreos de alta calidad para inmobiliarias en Galicia. 100 € por propiedad.">
+  <meta name="twitter:image" content="https://altura.gal/og-image.jpg">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap"></noscript>
+
+  <link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ALTURA",
+    "description": "Fotografía y vídeo aéreo de alta calidad para inmobiliarias en Galicia. 100 euros por propiedad. Gestión de redes sociales y retainer mensual para agencias.",
+    "url": "https://altura.gal/",
+    "image": "https://altura.gal/og-image.jpg",
+    "priceRange": "€€",
+    "areaServed": { "@type": "Place", "name": "Galicia, España" },
+    "knowsLanguage": ["es", "en"],
+    "address": { "@type": "PostalAddress", "addressRegion": "Galicia", "addressCountry": "ES" },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Fotos y vídeo aéreo por propiedad",
+        "price": "100",
+        "priceCurrency": "EUR",
+        "description": "Sesión aérea con fotografía de alta calidad y vídeo editado, listos para publicar."
+      },
+      {
+        "@type": "Offer",
+        "name": "Redes sociales",
+        "description": "Gestión y actualización de redes sociales, cuota mensual."
+      },
+      {
+        "@type": "Offer",
+        "name": "Retainer mensual para agencias",
+        "description": "Colaboración continua mensual para agencias inmobiliarias."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0B0E13;
+      --card: #10141B;
+      --card-hover: #131823;
+      --ink: #F1EFE9;
+      --muted: rgba(241,239,233,0.64);
+      --line: rgba(241,239,233,0.09);
+      --amber: #FFB454;
+      --amber-dim: rgba(255,180,84,0.15);
+      --display: 'Space Grotesk', sans-serif;
+      --body: 'Inter', sans-serif;
+      --wrap: 1140px;
+      --gutter: 24px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--ink);
+      font-family: var(--body); font-size: 16px; line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+    section { padding: 5.5rem 0; }
+
+    h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; }
+    h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); margin-bottom: 1rem; }
+    .kicker {
+      font-family: var(--display); font-weight: 500; font-size: 0.8rem;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber);
+      margin-bottom: 1.1rem; display: block;
+    }
+    .section-sub { color: var(--muted); max-width: 560px; margin-bottom: 3rem; font-size: 1.02rem; }
+
+    /* reveal on scroll (fires once, no loops) */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* Nav */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .nav.scrolled { background: rgba(11,14,19,0.82); backdrop-filter: blur(12px); border-bottom-color: var(--line); }
+    .nav-inner {
+      max-width: var(--wrap); margin: 0 auto; padding: 1.1rem var(--gutter);
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    }
+    .logo { font-family: var(--display); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; display: inline-flex; align-items: center; gap: 0.45rem; }
+    .logo .dot { width: 10px; height: 10px; background: var(--amber); border-radius: 50%; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; font-size: 0.92rem; color: var(--muted); }
+    .nav-links a:hover { color: var(--ink); }
+    .lang-link { font-family: var(--display); font-size: 0.85rem; color: var(--amber); border: 1px solid var(--amber-dim); padding: 0.3rem 0.7rem; border-radius: 100px; }
+    .lang-link:hover { background: var(--amber-dim); }
+    .nav-cta {
+      font-family: var(--display); font-weight: 500; font-size: 0.9rem;
+      background: var(--ink); color: var(--bg); padding: 0.6rem 1.3rem; border-radius: 100px;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+    .nav-cta:hover { background: var(--amber); transform: translateY(-2px); }
+    .hamburger { display: none; background: none; border: none; color: var(--ink); cursor: pointer; width: 34px; height: 34px; }
+    .hamburger svg { width: 100%; height: 100%; }
+
+    /* Hero */
+    .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; padding: 0; }
+    .hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(11,14,19,0.55) 0%, rgba(11,14,19,0.15) 40%, rgba(11,14,19,0.92) 100%);
+    }
+    .hero-inner { position: relative; z-index: 2; width: 100%; padding: 0 var(--gutter) 5.5rem; margin: 0 auto; max-width: var(--wrap); }
+    .hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); margin-bottom: 1.4rem; max-width: 780px; }
+    .hero h1 em { font-style: normal; color: var(--amber); }
+    .hero .sub { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--ink); max-width: 560px; margin-bottom: 2.2rem; opacity: 0.9; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--display); font-weight: 500; font-size: 0.98rem;
+      padding: 0.95rem 1.8rem; border-radius: 100px; cursor: pointer; border: none;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+    .btn-primary { background: var(--amber); color: #171208; box-shadow: 0 6px 30px rgba(255,180,84,0.25); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 38px rgba(255,180,84,0.35); }
+    .btn-ghost { background: rgba(241,239,233,0.08); color: var(--ink); border: 1px solid var(--line); backdrop-filter: blur(6px); }
+    .btn-ghost:hover { background: rgba(241,239,233,0.16); transform: translateY(-3px); }
+
+    /* Benefits */
+    .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
+    .benefit {
+      background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+      padding: 1.7rem 1.5rem; transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .benefit:hover { transform: translateY(-4px); border-color: var(--amber-dim); }
+    .benefit .ico { color: var(--amber); margin-bottom: 1.1rem; }
+    .benefit h3 { font-size: 1.06rem; margin-bottom: 0.6rem; }
+    .benefit p { font-size: 0.9rem; color: var(--muted); }
+
+    /* Services */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .service {
+      background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+      padding: 2rem 1.8rem; display: flex; flex-direction: column; gap: 0.9rem;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+    .service:hover { transform: translateY(-5px); border-color: var(--amber-dim); background: var(--card-hover); }
+    .service .num { font-family: var(--display); color: var(--amber); font-size: 0.85rem; letter-spacing: 0.15em; }
+    .service h3 { font-size: 1.35rem; }
+    .service p { color: var(--muted); font-size: 0.95rem; flex-grow: 1; }
+    .service .price {
+      font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: var(--amber);
+      border-top: 1px solid var(--line); padding-top: 1.1rem; margin-top: 0.4rem;
+    }
+    .service .price small { display: block; font-family: var(--body); font-weight: 400; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* Gallery */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .g-item {
+      border-radius: 16px; overflow: hidden; position: relative; cursor: pointer;
+      aspect-ratio: 4 / 3; border: 1px solid var(--line); padding: 0; background: none;
+    }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2,0.6,0.2,1); }
+    .g-item:hover img { transform: scale(1.05); }
+    .gallery-note { margin-top: 1.4rem; color: var(--muted); font-size: 0.88rem; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 100; background: rgba(8,10,14,0.94);
+      display: none; align-items: center; justify-content: center; padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 92vw; max-height: 82vh; border-radius: 12px; }
+    .lb-btn {
+      position: absolute; background: rgba(241,239,233,0.1); color: var(--ink); border: 1px solid var(--line);
+      width: 48px; height: 48px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s ease;
+    }
+    .lb-btn:hover { background: rgba(241,239,233,0.22); }
+    .lb-close { top: 1.4rem; right: 1.4rem; }
+    .lb-prev { left: 1.4rem; top: 50%; transform: translateY(-50%); }
+    .lb-next { right: 1.4rem; top: 50%; transform: translateY(-50%); }
+
+    /* Video */
+    .video-shell { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); background: #000; max-width: 900px; }
+    .video-shell video { width: 100%; display: block; }
+
+    /* Process */
+    .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .step { border-left: 2px solid var(--amber); padding: 0.2rem 0 0.2rem 1.4rem; }
+    .step .n { font-family: var(--display); color: var(--amber); font-size: 0.85rem; letter-spacing: 0.15em; display: block; margin-bottom: 0.5rem; }
+    .step h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .step p { color: var(--muted); font-size: 0.95rem; }
+
+    /* Pricing */
+    .pricing { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .pricing-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.2rem; align-items: stretch; }
+    .price-main {
+      background: linear-gradient(145deg, #131823, #0F131C); border: 1px solid var(--amber-dim);
+      border-radius: 22px; padding: 2.6rem 2.4rem;
+    }
+    .price-main .amount { font-family: var(--display); font-weight: 700; font-size: clamp(3rem, 6vw, 4.2rem); color: var(--amber); line-height: 1; margin: 0.6rem 0 1.4rem; }
+    .price-main .amount small { font-size: 1.1rem; color: var(--muted); font-weight: 500; }
+    .price-main ul { list-style: none; display: grid; gap: 0.7rem; margin-bottom: 2rem; }
+    .price-main li { display: flex; gap: 0.7rem; align-items: flex-start; color: var(--muted); font-size: 0.97rem; }
+    .price-main li::before { content: ""; min-width: 18px; height: 18px; margin-top: 4px; border-radius: 50%; background: var(--amber-dim); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFB454' stroke-width='3.5'%3E%3Cpath d='M4 12l5 5 11-11'/%3E%3C/svg%3E"); background-size: 11px; background-position: center; background-repeat: no-repeat; }
+    .price-side { display: flex; flex-direction: column; gap: 1.2rem; }
+    .price-card { background: var(--bg); border: 1px solid var(--line); border-radius: 22px; padding: 1.8rem 1.7rem; flex-grow: 1; }
+    .price-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .price-card p { color: var(--muted); font-size: 0.92rem; }
+    .price-card .tag { display: inline-block; font-family: var(--display); color: var(--amber); font-size: 0.9rem; margin-top: 0.9rem; }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
+    .contact-info p { color: var(--muted); margin-bottom: 1rem; }
+    .form-card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 2.2rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .field { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+    .field input, .field select, .field textarea {
+      width: 100%; background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+      padding: 0.85rem 1rem; color: var(--ink); font-family: var(--body); font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--amber); }
+    .field textarea { resize: vertical; min-height: 120px; }
+    .hp { position: absolute; left: -9999px; top: -9999px; }
+    .form-card .btn { width: 100%; justify-content: center; margin-top: 1.2rem; }
+    .success-card {
+      display: none; text-align: center; padding: 3rem 1.5rem;
+      background: var(--card); border: 1px solid var(--amber-dim); border-radius: 22px;
+    }
+    .success-card.show { display: block; }
+    .success-card .big { font-family: var(--display); font-size: 1.6rem; color: var(--amber); margin-bottom: 0.7rem; }
+    .success-card p { color: var(--muted); }
+
+    /* FAQ */
+    .faq-list { max-width: 760px; display: grid; gap: 0.8rem; }
+    .faq-item { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 1.05rem 1.35rem; }
+    .faq-item summary {
+      font-family: var(--display); font-weight: 500; font-size: 1rem; cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item .plus { color: var(--amber); font-size: 1.25rem; transition: transform 0.25s ease; font-weight: 500; }
+    .faq-item[open] .plus { transform: rotate(45deg); }
+    .faq-item p { margin-top: 0.7rem; color: var(--muted); font-size: 0.93rem; }
+
+    /* Footer */
+    .footer { border-top: 1px solid var(--line); padding: 2.6rem 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .footer .meta { color: var(--muted); font-size: 0.85rem; }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--amber); }
+
+    @media (max-width: 900px) {
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-links, .nav .lang-link { display: none; }
+      .hamburger { display: block; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .hero-inner { padding-bottom: 4rem; }
+    }
+    .mobile-menu {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 60;
+      background: rgba(11,14,19,0.98); backdrop-filter: blur(10px);
+      flex-direction: column; align-items: center; justify-content: center; gap: 1.6rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--display); font-size: 1.4rem; }
+    .mobile-menu .close { position: absolute; top: 1.2rem; right: 1.4rem; background: none; border: none; color: var(--ink); font-size: 1.6rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="dot"></span>altura</a>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#precios">Precios</a>
+      <a href="en.html" class="lang-link" lang="en" hreflang="en">EN</a>
+      <a href="#contacto" class="nav-cta">Hablemos</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close" id="menuClose" aria-label="Cerrar menú">&times;</button>
+  <a href="#servicios">Servicios</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#proceso">Proceso</a>
+  <a href="#precios">Precios</a>
+  <a href="en.html">English</a>
+  <a href="#contacto" style="color: var(--amber)">Hablemos</a>
+</div>
+
+<header class="hero">
+  <img class="bg" src="images/hero.jpg" alt="Costa de Galicia al atardecer vista desde un dron" width="1920" height="1080" fetchpriority="high">
+  <div class="hero-inner">
+    <span class="kicker">Fotografía y vídeo aéreo en Galicia</span>
+    <h1>Tu propiedad,<br>vista <em>desde el cielo.</em></h1>
+    <p class="sub">Fotos y vídeos aéreos de alta calidad para inmobiliarias que quieren vender más rápido. 100 € por propiedad.</p>
+    <div class="hero-ctas">
+      <a href="#portfolio" class="btn btn-primary">Ver portfolio</a>
+      <a href="#contacto" class="btn btn-ghost">Hablemos</a>
+    </div>
+  </div>
+</header>
+
+<section id="porque">
+  <div class="wrap">
+    <span class="kicker reveal">Por qué aéreo</span>
+    <h2 class="reveal">Las fotos aéreas venden más rápido.</h2>
+    <p class="section-sub reveal">Un anuncio con imágenes aéreas deja de ser una casa y pasa a ser un lugar. Así de simple.</p>
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M12 8.5v7M8.5 12h7"/></svg>
+        <h3>Contexto completo</h3>
+        <p>Toda la finca, sus límites y los alrededores en una sola imagen. El comprador entiende la propiedad de un vistazo.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></svg>
+        <h3>Más clics en portales</h3>
+        <p>Tu anuncio destaca entre cientos de fotos a ras de suelo en Idealista, Fotocasa o cualquier portal.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <h3>Lo que de verdad importa</h3>
+        <p>Distancia a la playa, al pueblo, al acceso principal. La vista aérea lo muestra sin palabras.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 15l5-5 4 4 3-3 6 6"/></svg>
+        <h3>Listo para redes</h3>
+        <p>El vídeo aéreo editado funciona en portales, Instagram y WhatsApp tal cual, sin trabajo extra para ti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Servicios</span>
+    <h2 class="reveal">Tres formas de trabajar juntos.</h2>
+    <p class="section-sub reveal">Por propiedad, por redes o en colaboración continua. Tú eliges el ritmo.</p>
+    <div class="services-grid">
+      <div class="service reveal">
+        <span class="num">01</span>
+        <h3>Fotos + vídeo por propiedad</h3>
+        <p>Sesión aérea de tu inmueble con fotografía de alta calidad y vídeo editado, listos para publicar en portales y redes.</p>
+        <div class="price">100 € / propiedad<small>Precio cerrado, sin sorpresas.</small></div>
+      </div>
+      <div class="service reveal">
+        <span class="num">02</span>
+        <h3>Redes sociales</h3>
+        <p>Gestiono y mantengo tus redes sociales actualizadas y atractivas, para que tu marca siempre esté presente y bien presentada.</p>
+        <div class="price">Cuota mensual<small>Detalles por contacto.</small></div>
+      </div>
+      <div class="service reveal">
+        <span class="num">03</span>
+        <h3>Retainer mensual</h3>
+        <p>Para agencias que publican constantemente. Trabajamos juntos cada mes, sin precio por propiedad, con todo incluido.</p>
+        <div class="price">A medida<small>Por contacto, según volumen.</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Portfolio</span>
+    <h2 class="reveal">Lo que el cielo ve.</h2>
+    <p class="section-sub reveal">Una muestra de imágenes aéreas. Haz clic en cualquiera para verla en grande.</p>
+    <div class="gallery-grid">
+      <button class="g-item reveal" data-full="images/g1.jpg"><img src="images/g1.jpg" alt="Villa con piscina vista desde el aire" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g2.jpg"><img src="images/g2.jpg" alt="Ría gallega con barcas y colinas verdes" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g3.jpg"><img src="images/g3.jpg" alt="Faro en cabo rocoso con olas" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g4.jpg"><img src="images/g4.jpg" alt="Playa de Galicia con olas turquesa" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g5.jpg"><img src="images/g5.jpg" alt="Finca de piedra entre bosques de Galicia" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g6.jpg"><img src="images/g6.jpg" alt="Casco antiguo gallego con tejados de teja" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g7.jpg"><img src="images/g7.jpg" alt="Edificio frente al mar con vistas a la playa" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g8.jpg"><img src="images/g8.jpg" alt="Atardecer sobre el Atlántico visto desde un dron" width="1024" height="1024" loading="lazy"></button>
+    </div>
+    <p class="gallery-note">Imágenes de muestra del estilo de trabajo. Cada propiedad recibe su propia sesión personalizada.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Vista ampliada">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior">&#8592;</button>
+  <img src="images/g1.jpg" alt="" id="lbImg" width="1024" height="1024">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente">&#8594;</button>
+</div>
+
+<section id="video" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Showreel</span>
+    <h2 class="reveal">El vídeo que vende la zona.</h2>
+    <p class="section-sub reveal">Cada propiedad recibe su propio vídeo aéreo editado. Este es el estilo.</p>
+    <div class="video-shell reveal">
+      <video controls preload="none" poster="images/video-poster.jpg" width="1280" height="720">
+        <source src="videos/showreel.mp4" type="video/mp4">
+        Tu navegador no soporta vídeo.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Proceso</span>
+    <h2 class="reveal">Simple, de principio a fin.</h2>
+    <div class="process-grid">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <h3>Hablamos</h3>
+        <p>Me cuentas la propiedad, la zona y lo que necesitas. Sin compromiso.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">02</span>
+        <h3>Vuelo</h3>
+        <p>Capturo las mejores tomas con la mejor luz del día y las condiciones adecuadas.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">03</span>
+        <h3>Entrega</h3>
+        <p>Fotos retocadas y vídeo editado, listos para tu anuncio y tus redes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="precios">
+  <div class="wrap">
+    <span class="kicker reveal">Precios</span>
+    <h2 class="reveal">Precios claros, sin letra pequeña.</h2>
+    <div class="pricing-grid" style="margin-top: 2.4rem;">
+      <div class="price-main reveal">
+        <span class="kicker" style="margin-bottom: 0;">Por propiedad</span>
+        <div class="amount">100 € <small>/ propiedad</small></div>
+        <ul>
+          <li>Fotografía aérea de alta calidad de toda la finca y sus alrededores</li>
+          <li>Vídeo aéreo editado, listo para portales y redes</li>
+          <li>Fotos retocadas y entregadas listas para publicar</li>
+          <li>Precio cerrado, sin sorpresas</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary">Reservar sesión</a>
+      </div>
+      <div class="price-side">
+        <div class="price-card reveal">
+          <h3>Redes sociales</h3>
+          <p>Gestión y actualización continua de tus redes, para que tu marca esté siempre activa.</p>
+          <span class="tag">Cuota mensual · detalles por contacto</span>
+        </div>
+        <div class="price-card reveal">
+          <h3>Retainer para agencias</h3>
+          <p>¿Publicas constantemente? Trabajamos en colaboración mensual, sin precio por propiedad.</p>
+          <span class="tag">A medida · por contacto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <span class="kicker reveal">Contacto</span>
+    <h2 class="reveal">Hablemos de tu propiedad.</h2>
+    <div class="contact-grid" style="margin-top: 2.4rem;">
+      <div class="contact-info reveal">
+        <p>Cuéntame qué necesitas y te respondo con un plan claro: qué capturo, cuándo y qué recibes.</p>
+        <p>¿Eres una agencia con varios inmuebles? El retainer mensual te interesará.</p>
+        <p style="color: var(--muted); font-size: 0.88rem;">Trabajo en toda Galicia.</p>
+      </div>
+      <div class="form-card reveal">
+        <form id="contactForm" action="https://formspree.io/f/xwlkwoaq" method="POST">
+          <input type="hidden" name="_subject" value="ALTURA - Nueva consulta desde la web">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+          <div class="form-grid">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono (opcional)</label>
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="servicio">Servicio</label>
+              <select id="servicio" name="servicio" required>
+                <option value="Fotos y vídeo por propiedad (100 €)">Fotos y vídeo por propiedad (100 €)</option>
+                <option value="Redes sociales">Redes sociales</option>
+                <option value="Retainer mensual">Retainer mensual</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" required placeholder="Cuéntame la propiedad, la zona y lo que necesitas."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+        <div class="success-card" id="successCard">
+          <div class="big">Mensaje enviado.</div>
+          <p>Gracias. Te respondo en breve.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Preguntas</span>
+    <h2 class="reveal">Lo que todos preguntan.</h2>
+    <div class="faq-list" style="margin-top: 2rem;">
+      <details class="faq-item">
+        <summary>¿Qué incluye la sesión de 100 €? <span class="plus">+</span></summary>
+        <p>Fotografía aérea de alta calidad y vídeo editado de tu propiedad, listos para publicar en portales y redes sociales.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tarda la entrega? <span class="plus">+</span></summary>
+        <p>La entrega es rápida una vez realizado el vuelo. Te confirmo el plazo exacto cuando hablamos de tu propiedad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Trabajas en toda Galicia? <span class="plus">+</span></summary>
+        <p>Sí, en toda Galicia. Y si tu agencia publica con frecuencia, el retainer mensual sale mejor que pagar por propiedad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Los vuelos son legales? <span class="plus">+</span></summary>
+        <p>Sí, todos los vuelos se realizan conforme a la normativa europea de drones vigente.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a href="/" class="logo"><span class="dot"></span>altura</a>
+    <span class="meta">Fotografía y vídeo aéreo · Galicia, España · © 2026</span>
+    <span class="meta">Web by <a href="https://www.weesites.co.uk" target="_blank" rel="noopener">Wee Sites</a></span>
+  </div>
+</footer>
+
+<script>
+  // nav scroll state
+  var nav = document.getElementById('nav');
+  addEventListener('scroll', function() { nav.classList.toggle('scrolled', scrollY > 40); }, { passive: true });
+
+  // mobile menu
+  var mm = document.getElementById('mobileMenu');
+  document.getElementById('hamburger').addEventListener('click', function() { mm.classList.add('open'); });
+  document.getElementById('menuClose').addEventListener('click', function() { mm.classList.remove('open'); });
+  mm.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { mm.classList.remove('open'); }); });
+
+  // reveal once
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+
+  // lightbox
+  var items = Array.prototype.slice.call(document.querySelectorAll('.g-item'));
+  var lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg'), current = 0;
+  function openLb(i) {
+    current = i;
+    lbImg.src = items[i].getAttribute('data-full');
+    lbImg.alt = items[i].querySelector('img').alt;
+    lb.classList.add('open');
+  }
+  items.forEach(function(el, i) { el.addEventListener('click', function() { openLb(i); }); });
+  document.getElementById('lbClose').addEventListener('click', function() { lb.classList.remove('open'); });
+  document.getElementById('lbPrev').addEventListener('click', function() { openLb((current - 1 + items.length) % items.length); });
+  document.getElementById('lbNext').addEventListener('click', function() { openLb((current + 1) % items.length); });
+  lb.addEventListener('click', function(e) { if (e.target === lb) lb.classList.remove('open'); });
+  addEventListener('keydown', function(e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lb.classList.remove('open');
+    if (e.key === 'ArrowLeft') openLb((current - 1 + items.length) % items.length);
+    if (e.key === 'ArrowRight') openLb((current + 1) % items.length);
+  });
+
+  // form: honeypot + time trap + fetch submit, success card lives outside the form
+  var loadedAt = Date.now();
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('successCard');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (form.elements['_gotcha'].value) return;
+    if (Date.now() - loadedAt < 6000) return;
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function(r) {
+        if (!r.ok) throw new Error('bad');
+        form.style.display = 'none';
+        success.classList.add('show');
+      })
+      .catch(function() {
+        alert('No se pudo enviar. Inténtalo de nuevo, por favor.');
+      });
+  });
+</script>
+
+</body>
+</html>

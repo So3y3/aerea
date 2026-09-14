@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTURA | Drone photography and video for real estate in Galicia</title>
+  <meta name="description" content="High quality aerial photos and videos for real estate agencies across Galicia. 100 EUR per property. Social media management and monthly retainers for agencies.">
+  <link rel="canonical" href="https://altura.gal/en.html">
+  <link rel="alternate" hreflang="es" href="https://altura.gal/">
+  <link rel="alternate" hreflang="en" href="https://altura.gal/en.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ALTURA">
+  <meta property="og:title" content="ALTURA | Drone photography and video in Galicia">
+  <meta property="og:description" content="High quality aerial photos and videos for real estate agencies in Galicia. 100 EUR per property.">
+  <meta property="og:url" content="https://altura.gal/en.html">
+  <meta property="og:image" content="https://altura.gal/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ALTURA | Drone photography and video in Galicia">
+  <meta name="twitter:description" content="High quality aerial photos and videos for real estate agencies in Galicia. 100 EUR per property.">
+  <meta name="twitter:image" content="https://altura.gal/og-image.jpg">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap"></noscript>
+
+  <link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ALTURA",
+    "description": "High quality aerial drone photography and video for real estate agencies in Galicia, Spain. 100 euros per property. Social media management and monthly retainers for agencies.",
+    "url": "https://altura.gal/en.html",
+    "image": "https://altura.gal/og-image.jpg",
+    "priceRange": "€€",
+    "areaServed": { "@type": "Place", "name": "Galicia, Spain" },
+    "knowsLanguage": ["en", "es"],
+    "address": { "@type": "PostalAddress", "addressRegion": "Galicia", "addressCountry": "ES" },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Aerial photos and video per property",
+        "price": "100",
+        "priceCurrency": "EUR",
+        "description": "Aerial session with high quality photography and edited video, ready to publish."
+      },
+      {
+        "@type": "Offer",
+        "name": "Social media management",
+        "description": "Ongoing social media management and updates, monthly fee."
+      },
+      {
+        "@type": "Offer",
+        "name": "Monthly retainer for agencies",
+        "description": "Ongoing monthly collaboration for real estate agencies."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0B0E13;
+      --card: #10141B;
+      --card-hover: #131823;
+      --ink: #F1EFE9;
+      --muted: rgba(241,239,233,0.64);
+      --line: rgba(241,239,233,0.09);
+      --amber: #FFB454;
+      --amber-dim: rgba(255,180,84,0.15);
+      --display: 'Space Grotesk', sans-serif;
+      --body: 'Inter', sans-serif;
+      --wrap: 1140px;
+      --gutter: 24px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--ink);
+      font-family: var(--body); font-size: 16px; line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+    section { padding: 5.5rem 0; }
+
+    h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; }
+    h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); margin-bottom: 1rem; }
+    .kicker {
+      font-family: var(--display); font-weight: 500; font-size: 0.8rem;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber);
+      margin-bottom: 1.1rem; display: block;
+    }
+    .section-sub { color: var(--muted); max-width: 560px; margin-bottom: 3rem; font-size: 1.02rem; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .nav.scrolled { background: rgba(11,14,19,0.82); backdrop-filter: blur(12px); border-bottom-color: var(--line); }
+    .nav-inner {
+      max-width: var(--wrap); margin: 0 auto; padding: 1.1rem var(--gutter);
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    }
+    .logo { font-family: var(--display); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; display: inline-flex; align-items: center; gap: 0.45rem; }
+    .logo .dot { width: 10px; height: 10px; background: var(--amber); border-radius: 50%; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; font-size: 0.92rem; color: var(--muted); }
+    .nav-links a:hover { color: var(--ink); }
+    .lang-link { font-family: var(--display); font-size: 0.85rem; color: var(--amber); border: 1px solid var(--amber-dim); padding: 0.3rem 0.7rem; border-radius: 100px; }
+    .lang-link:hover { background: var(--amber-dim); }
+    .nav-cta {
+      font-family: var(--display); font-weight: 500; font-size: 0.9rem;
+      background: var(--ink); color: var(--bg); padding: 0.6rem 1.3rem; border-radius: 100px;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+    .nav-cta:hover { background: var(--amber); transform: translateY(-2px); }
+    .hamburger { display: none; background: none; border: none; color: var(--ink); cursor: pointer; width: 34px; height: 34px; }
+    .hamburger svg { width: 100%; height: 100%; }
+
+    .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; padding: 0; }
+    .hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(11,14,19,0.55) 0%, rgba(11,14,19,0.15) 40%, rgba(11,14,19,0.92) 100%);
+    }
+    .hero-inner { position: relative; z-index: 2; width: 100%; padding: 0 var(--gutter) 5.5rem; margin: 0 auto; max-width: var(--wrap); }
+    .hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); margin-bottom: 1.4rem; max-width: 780px; }
+    .hero h1 em { font-style: normal; color: var(--amber); }
+    .hero .sub { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--ink); max-width: 560px; margin-bottom: 2.2rem; opacity: 0.9; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--display); font-weight: 500; font-size: 0.98rem;
+      padding: 0.95rem 1.8rem; border-radius: 100px; cursor: pointer; border: none;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+    .btn-primary { background: var(--amber); color: #171208; box-shadow: 0 6px 30px rgba(255,180,84,0.25); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 38px rgba(255,180,84,0.35); }
+    .btn-ghost { background: rgba(241,239,233,0.08); color: var(--ink); border: 1px solid var(--line); backdrop-filter: blur(6px); }
+    .btn-ghost:hover { background: rgba(241,239,233,0.16); transform: translateY(-3px); }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
+    .benefit {
+      background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+      padding: 1.7rem 1.5rem; transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .benefit:hover { transform: translateY(-4px); border-color: var(--amber-dim); }
+    .benefit .ico { color: var(--amber); margin-bottom: 1.1rem; }
+    .benefit h3 { font-size: 1.06rem; margin-bottom: 0.6rem; }
+    .benefit p { font-size: 0.9rem; color: var(--muted); }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .service {
+      background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+      padding: 2rem 1.8rem; display: flex; flex-direction: column; gap: 0.9rem;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+    .service:hover { transform: translateY(-5px); border-color: var(--amber-dim); background: var(--card-hover); }
+    .service .num { font-family: var(--display); color: var(--amber); font-size: 0.85rem; letter-spacing: 0.15em; }
+    .service h3 { font-size: 1.35rem; }
+    .service p { color: var(--muted); font-size: 0.95rem; flex-grow: 1; }
+    .service .price {
+      font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: var(--amber);
+      border-top: 1px solid var(--line); padding-top: 1.1rem; margin-top: 0.4rem;
+    }
+    .service .price small { display: block; font-family: var(--body); font-weight: 400; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .g-item {
+      border-radius: 16px; overflow: hidden; position: relative; cursor: pointer;
+      aspect-ratio: 4 / 3; border: 1px solid var(--line); padding: 0; background: none;
+    }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2,0.6,0.2,1); }
+    .g-item:hover img { transform: scale(1.05); }
+    .gallery-note { margin-top: 1.4rem; color: var(--muted); font-size: 0.88rem; }
+
+    .lightbox {
+      position: fixed; inset: 0; z-index: 100; background: rgba(8,10,14,0.94);
+      display: none; align-items: center; justify-content: center; padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 92vw; max-height: 82vh; border-radius: 12px; }
+    .lb-btn {
+      position: absolute; background: rgba(241,239,233,0.1); color: var(--ink); border: 1px solid var(--line);
+      width: 48px; height: 48px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s ease;
+    }
+    .lb-btn:hover { background: rgba(241,239,233,0.22); }
+    .lb-close { top: 1.4rem; right: 1.4rem; }
+    .lb-prev { left: 1.4rem; top: 50%; transform: translateY(-50%); }
+    .lb-next { right: 1.4rem; top: 50%; transform: translateY(-50%); }
+
+    .video-shell { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); background: #000; max-width: 900px; }
+    .video-shell video { width: 100%; display: block; }
+
+    .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .step { border-left: 2px solid var(--amber); padding: 0.2rem 0 0.2rem 1.4rem; }
+    .step .n { font-family: var(--display); color: var(--amber); font-size: 0.85rem; letter-spacing: 0.15em; display: block; margin-bottom: 0.5rem; }
+    .step h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .step p { color: var(--muted); font-size: 0.95rem; }
+
+    .pricing { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .pricing-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.2rem; align-items: stretch; }
+    .price-main {
+      background: linear-gradient(145deg, #131823, #0F131C); border: 1px solid var(--amber-dim);
+      border-radius: 22px; padding: 2.6rem 2.4rem;
+    }
+    .price-main .amount { font-family: var(--display); font-weight: 700; font-size: clamp(3rem, 6vw, 4.2rem); color: var(--amber); line-height: 1; margin: 0.6rem 0 1.4rem; }
+    .price-main .amount small { font-size: 1.1rem; color: var(--muted); font-weight: 500; }
+    .price-main ul { list-style: none; display: grid; gap: 0.7rem; margin-bottom: 2rem; }
+    .price-main li { display: flex; gap: 0.7rem; align-items: flex-start; color: var(--muted); font-size: 0.97rem; }
+    .price-main li::before { content: ""; min-width: 18px; height: 18px; margin-top: 4px; border-radius: 50%; background: var(--amber-dim); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFB454' stroke-width='3.5'%3E%3Cpath d='M4 12l5 5 11-11'/%3E%3C/svg%3E"); background-size: 11px; background-position: center; background-repeat: no-repeat; }
+    .price-side { display: flex; flex-direction: column; gap: 1.2rem; }
+    .price-card { background: var(--bg); border: 1px solid var(--line); border-radius: 22px; padding: 1.8rem 1.7rem; flex-grow: 1; }
+    .price-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .price-card p { color: var(--muted); font-size: 0.92rem; }
+    .price-card .tag { display: inline-block; font-family: var(--display); color: var(--amber); font-size: 0.9rem; margin-top: 0.9rem; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
+    .contact-info p { color: var(--muted); margin-bottom: 1rem; }
+    .form-card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 2.2rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .field { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+    .field input, .field select, .field textarea {
+      width: 100%; background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+      padding: 0.85rem 1rem; color: var(--ink); font-family: var(--body); font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--amber); }
+    .field textarea { resize: vertical; min-height: 120px; }
+    .hp { position: absolute; left: -9999px; top: -9999px; }
+    .form-card .btn { width: 100%; justify-content: center; margin-top: 1.2rem; }
+    .success-card {
+      display: none; text-align: center; padding: 3rem 1.5rem;
+      background: var(--card); border: 1px solid var(--amber-dim); border-radius: 22px;
+    }
+    .success-card.show { display: block; }
+    .success-card .big { font-family: var(--display); font-size: 1.6rem; color: var(--amber); margin-bottom: 0.7rem; }
+    .success-card p { color: var(--muted); }
+
+    .faq-list { max-width: 760px; display: grid; gap: 0.8rem; }
+    .faq-item { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 1.05rem 1.35rem; }
+    .faq-item summary {
+      font-family: var(--display); font-weight: 500; font-size: 1rem; cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item .plus { color: var(--amber); font-size: 1.25rem; transition: transform 0.25s ease; font-weight: 500; }
+    .faq-item[open] .plus { transform: rotate(45deg); }
+    .faq-item p { margin-top: 0.7rem; color: var(--muted); font-size: 0.93rem; }
+
+    .footer { border-top: 1px solid var(--line); padding: 2.6rem 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .footer .meta { color: var(--muted); font-size: 0.85rem; }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--amber); }
+
+    @media (max-width: 900px) {
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-links, .nav .lang-link { display: none; }
+      .hamburger { display: block; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .hero-inner { padding-bottom: 4rem; }
+    }
+    .mobile-menu {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 60;
+      background: rgba(11,14,19,0.98); backdrop-filter: blur(10px);
+      flex-direction: column; align-items: center; justify-content: center; gap: 1.6rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--display); font-size: 1.4rem; }
+    .mobile-menu .close { position: absolute; top: 1.2rem; right: 1.4rem; background: none; border: none; color: var(--ink); font-size: 1.6rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="en.html" class="logo"><span class="dot"></span>altura</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="/" class="lang-link" lang="es" hreflang="es">ES</a>
+      <a href="#contact" class="nav-cta">Let's talk</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close" id="menuClose" aria-label="Close menu">&times;</button>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#process">Process</a>
+  <a href="#pricing">Pricing</a>
+  <a href="/">Español</a>
+  <a href="#contact" style="color: var(--amber)">Let's talk</a>
+</div>
+
+<header class="hero">
+  <img class="bg" src="images/hero.jpg" alt="Galicia coastline at sunset seen from a drone" width="1920" height="1080" fetchpriority="high">
+  <div class="hero-inner">
+    <span class="kicker">Drone photography and video in Galicia</span>
+    <h1>Your property,<br>seen <em>from the sky.</em></h1>
+    <p class="sub">High quality aerial photos and videos for real estate agencies that want to sell faster. 100 EUR per property.</p>
+    <div class="hero-ctas">
+      <a href="#portfolio" class="btn btn-primary">See the portfolio</a>
+      <a href="#contact" class="btn btn-ghost">Let's talk</a>
+    </div>
+  </div>
+</header>
+
+<section id="why">
+  <div class="wrap">
+    <span class="kicker reveal">Why aerial</span>
+    <h2 class="reveal">Aerial photos sell faster.</h2>
+    <p class="section-sub reveal">With aerial images a listing stops being a house and becomes a place. It is that simple.</p>
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M12 8.5v7M8.5 12h7"/></svg>
+        <h3>The full picture</h3>
+        <p>The whole plot, its boundaries and the surroundings in a single image. Buyers understand the property at a glance.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></svg>
+        <h3>More clicks on portals</h3>
+        <p>Your listing stands out among hundreds of ground level photos on Idealista, Fotocasa or any portal.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <h3>What actually matters</h3>
+        <p>Distance to the beach, to the town, to the main road. The aerial view shows it without words.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 15l5-5 4 4 3-3 6 6"/></svg>
+        <h3>Social ready</h3>
+        <p>The edited aerial video works on portals, Instagram and WhatsApp as is, with no extra work for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Services</span>
+    <h2 class="reveal">Three ways to work together.</h2>
+    <p class="section-sub reveal">Per property, per month or in an ongoing collaboration. You choose the pace.</p>
+    <div class="services-grid">
+      <div class="service reveal">
+        <span class="num">01</span>
+        <h3>Photos + video per property</h3>
+        <p>An aerial session of your property with high quality photography and edited video, ready to publish on portals and social.</p>
+        <div class="price">100 € / property<small>Fixed price, no surprises.</small></div>
+      </div>
+      <div class="service reveal">
+        <span class="num">02</span>
+        <h3>Social media</h3>
+        <p>I manage and keep your social media updated and looking great, so your brand is always present and well presented.</p>
+        <div class="price">Monthly fee<small>Details on request.</small></div>
+      </div>
+      <div class="service reveal">
+        <span class="num">03</span>
+        <h3>Monthly retainer</h3>
+        <p>For agencies that list constantly. We work together every month, no per property price, everything included.</p>
+        <div class="price">Tailored<small>On request, based on volume.</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Portfolio</span>
+    <h2 class="reveal">What the sky sees.</h2>
+    <p class="section-sub reveal">A selection of aerial images. Click any of them to view full size.</p>
+    <div class="gallery-grid">
+      <button class="g-item reveal" data-full="images/g1.jpg"><img src="images/g1.jpg" alt="Villa with pool seen from the air" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g2.jpg"><img src="images/g2.jpg" alt="Galician estuary with boats and green hills" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g3.jpg"><img src="images/g3.jpg" alt="Lighthouse on a rocky cape with waves" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g4.jpg"><img src="images/g4.jpg" alt="Galician beach with turquoise waves" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g5.jpg"><img src="images/g5.jpg" alt="Stone cottage among Galician forests" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g6.jpg"><img src="images/g6.jpg" alt="Galician old town with terracotta rooftops" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g7.jpg"><img src="images/g7.jpg" alt="Seafront building with beach views" width="1024" height="1024" loading="lazy"></button>
+      <button class="g-item reveal" data-full="images/g8.jpg"><img src="images/g8.jpg" alt="Sunset over the Atlantic from a drone" width="1024" height="1024" loading="lazy"></button>
+    </div>
+    <p class="gallery-note">Sample images showing the style of work. Every property gets its own custom session.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Enlarged view">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">&#8592;</button>
+  <img src="images/g1.jpg" alt="" id="lbImg" width="1024" height="1024">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next">&#8594;</button>
+</div>
+
+<section id="video" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Showreel</span>
+    <h2 class="reveal">The video that sells the area.</h2>
+    <p class="section-sub reveal">Every property gets its own edited aerial video. This is the style.</p>
+    <div class="video-shell reveal">
+      <video controls preload="none" poster="images/video-poster.jpg" width="1280" height="720">
+        <source src="videos/showreel.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Process</span>
+    <h2 class="reveal">Simple, start to finish.</h2>
+    <div class="process-grid">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <h3>We talk</h3>
+        <p>You tell me about the property, the area and what you need. No commitment.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">02</span>
+        <h3>The flight</h3>
+        <p>I capture the best shots in the best light and the right conditions.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">03</span>
+        <h3>Delivery</h3>
+        <p>Retouched photos and edited video, ready for your listing and your social.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <span class="kicker reveal">Pricing</span>
+    <h2 class="reveal">Clear prices, no fine print.</h2>
+    <div class="pricing-grid" style="margin-top: 2.4rem;">
+      <div class="price-main reveal">
+        <span class="kicker" style="margin-bottom: 0;">Per property</span>
+        <div class="amount">100 € <small>/ property</small></div>
+        <ul>
+          <li>High quality aerial photography of the whole plot and its surroundings</li>
+          <li>Edited aerial video, ready for portals and social</li>
+          <li>Retouched photos delivered ready to publish</li>
+          <li>Fixed price, no surprises</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Book a session</a>
+      </div>
+      <div class="price-side">
+        <div class="price-card reveal">
+          <h3>Social media</h3>
+          <p>Ongoing management and updates for your social channels, so your brand stays active.</p>
+          <span class="tag">Monthly fee · details on request</span>
+        </div>
+        <div class="price-card reveal">
+          <h3>Agency retainer</h3>
+          <p>List properties all the time? We work together monthly, with no per property price.</p>
+          <span class="tag">Tailored · on request</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="kicker reveal">Contact</span>
+    <h2 class="reveal">Let's talk about your property.</h2>
+    <div class="contact-grid" style="margin-top: 2.4rem;">
+      <div class="contact-info reveal">
+        <p>Tell me what you need and I will reply with a clear plan: what I capture, when and what you get.</p>
+        <p>An agency with several listings? The monthly retainer will interest you.</p>
+        <p style="color: var(--muted); font-size: 0.88rem;">I work across all of Galicia.</p>
+      </div>
+      <div class="form-card reveal">
+        <form id="contactForm" action="https://formspree.io/f/xwlkwoaq" method="POST">
+          <input type="hidden" name="_subject" value="ALTURA - New enquiry from the website">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+          <div class="form-grid">
+            <div class="field">
+              <label for="nombre">Name</label>
+              <input type="text" id="nombre" name="nombre" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="telefono">Phone (optional)</label>
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="servicio">Service</label>
+              <select id="servicio" name="servicio" required>
+                <option value="Photos and video per property (100 EUR)">Photos and video per property (100 EUR)</option>
+                <option value="Social media management">Social media management</option>
+                <option value="Monthly retainer">Monthly retainer</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="mensaje">Message</label>
+              <textarea id="mensaje" name="mensaje" required placeholder="Tell me about the property, the area and what you need."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+        <div class="success-card" id="successCard">
+          <div class="big">Message sent.</div>
+          <p>Thank you. I will get back to you shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker reveal">Questions</span>
+    <h2 class="reveal">What everyone asks.</h2>
+    <div class="faq-list" style="margin-top: 2rem;">
+      <details class="faq-item">
+        <summary>What is included in the 100 EUR session? <span class="plus">+</span></summary>
+        <p>High quality aerial photography and edited video of your property, ready to publish on portals and social media.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does delivery take? <span class="plus">+</span></summary>
+        <p>Delivery is quick once the flight is done. I will confirm the exact timeline when we discuss your property.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work across all of Galicia? <span class="plus">+</span></summary>
+        <p>Yes, all of Galicia. And if your agency lists frequently, the monthly retainer beats paying per property.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are the flights legal? <span class="plus">+</span></summary>
+        <p>Yes, all flights are carried out according to the current European drone regulations.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a href="en.html" class="logo"><span class="dot"></span>altura</a>
+    <span class="meta">Drone photography and video · Galicia, Spain · © 2026</span>
+    <span class="meta">Web by <a href="https://www.weesites.co.uk" target="_blank" rel="noopener">Wee Sites</a></span>
+  </div>
+</footer>
+
+<script>
+  var nav = document.getElementById('nav');
+  addEventListener('scroll', function() { nav.classList.toggle('scrolled', scrollY > 40); }, { passive: true });
+
+  var mm = document.getElementById('mobileMenu');
+  document.getElementById('hamburger').addEventListener('click', function() { mm.classList.add('open'); });
+  document.getElementById('menuClose').addEventListener('click', function() { mm.classList.remove('open'); });
+  mm.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { mm.classList.remove('open'); }); });
+
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+
+  var items = Array.prototype.slice.call(document.querySelectorAll('.g-item'));
+  var lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg'), current = 0;
+  function openLb(i) {
+    current = i;
+    lbImg.src = items[i].getAttribute('data-full');
+    lbImg.alt = items[i].querySelector('img').alt;
+    lb.classList.add('open');
+  }
+  items.forEach(function(el, i) { el.addEventListener('click', function() { openLb(i); }); });
+  document.getElementById('lbClose').addEventListener('click', function() { lb.classList.remove('open'); });
+  document.getElementById('lbPrev').addEventListener('click', function() { openLb((current - 1 + items.length) % items.length); });
+  document.getElementById('lbNext').addEventListener('click', function() { openLb((current + 1) % items.length); });
+  lb.addEventListener('click', function(e) { if (e.target === lb) lb.classList.remove('open'); });
+  addEventListener('keydown', function(e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lb.classList.remove('open');
+    if (e.key === 'ArrowLeft') openLb((current - 1 + items.length) % items.length);
+    if (e.key === 'ArrowRight') openLb((current + 1) % items.length);
+  });
+
+  var loadedAt = Date.now();
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('successCard');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (form.elements['_gotcha'].value) return;
+    if (Date.now() - loadedAt < 6000) return;
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function(r) {
+        if (!r.ok) throw new Error('bad');
+        form.style.display = 'none';
+        success.classList.add('show');
+      })
+      .catch(function() {
+        alert('Could not send. Please try again.');
+      });
+  });
+</script>
+
+</body>
+</html>
